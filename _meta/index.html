@@ -11,37 +11,19 @@
 </p>
 {{ out = resolve_file('_meta/socials.html') }}
 <h2>Highlighted Publications</h2>
-<article>
-    <header>
-        <h3>Token Elimination in Model Checking of Petri Net</h3>
-        <p>Nicolaj Ø. Jensen, Jirí Srba, Kim G. Larsen - TACAS 2025</p>
-    </header>
-    <p>
-    <details>
-        <summary>
-            Abstract
-        </summary>
-        We propose a novel state-space reduction framework to improve the performance of model checking of Petri
-        nets. We provide two instances of the framework: a static technique that considers only the structure of the
-        net, and a dynamic technique that additionally considers the current marking. By analyzing impossible, visible,
-        and directional effects of transitions, we identify places where tokens can be removed while preserving the
-        property in question. Unlike structural reductions, our techniques modify only the current marking, allowing the
-        net structure to be reused in multiple subproblems concurrently, which can be beneficial for example for CTL
-        model checking. We prove the correctness of our techniques and implement them in the open-source tool Tapaal, a
-        repeated winner in the CTL category in the annual model checking contest (MCC). We measure our methods’
-        performance on the MCC 2023 benchmark using the CTL categories and demonstrate that our methods reduce time and,
-        especially, memory usage. Our dynamic method explores 39.3% fewer configurations on average and achieves two
-        orders of magnitude speedup on at least one query on 23.7% of non-trivial models.
-    </details>
-    </p>
-    <p>
-        <a href="https://doi.org/10.1007/978-3-031-90643-5_11">In Proceedings</a>
-        • <a href="https://doi.org/10.5281/zenodo.14608438">Reprod. Artifact</a>
-        • <a href="https://github.com/TAPAAL/verifypn/pull/178">Code</a>
-    </p>
-</article>
+{{
+out = '\n'.join(
+        f'{{{{ resolve_file("_publications/{pub}"); out = resolve_file("_meta/pub_card.html") }}}}'
+        for pub in os.listdir('_publications')
+    )
+}}
 <h2>Blog Posts</h2>
 <ul>
-{{ out = '\n'.join(braced('resolve_file("_posts/' + post + '"); out = "\t<li>" + date + " <a href=\\"' + post + '\\">" + title + "</a></li>"') for post in os.listdir('_posts')) }}
+{{
+out = '\n'.join(
+        f'{{{{ resolve_file("_posts/{post}"); out = f"    <li>{{date}} <a href=\\"{post}\\">{{title}}</a></li>" }}}}'
+        for post in os.listdir('_posts')
+    )
+}}
 </ul>
 </body>

@@ -1,14 +1,11 @@
-<!--
-%%TITLE=Token Elimination in Model Checking of Petri Net
-%%CONFERENCE=TACAS 2025
-%%AUTHORS=Nicolaj Ø. Jensen, Jirí Srba, Kim G. Larsen
-%%EXTRA="<a href="https://doi.org/10.1007/978-3-031-90643-5_11">In Proceedings</a>
-        • <a href="https://doi.org/10.5281/zenodo.14608438">Reprod. Artifact</a>
-        • <a href="https://github.com/TAPAAL/verifypn/pull/178">Code</a>"
--->
-
-We propose a novel state-space reduction framework to improve the performance of model checking of Petri
-nets. We provide two instances of the framework: a static technique that considers only the structure of the
+{{ title = 'Token Elimination in Model Checking of Petri Net' }}
+{{ conference = 'TACAS 2025' }}
+{{ authors = 'Nicolaj Ø. Jensen, Jirí Srba, Kim G. Larsen' }}
+{{ links = '''<a href="https://doi.org/10.1007/978-3-031-90643-5_11">In Proceedings</a>
+• <a href="https://doi.org/10.5281/zenodo.14608438">Reprod. Artifact</a>
+• <a href="https://github.com/TAPAAL/verifypn/pull/178">Code</a>''' }}
+{{ abstract = '''We propose a novel state-space reduction framework to improve the performance of model checking of
+Petri nets. We provide two instances of the framework: a static technique that considers only the structure of the
 net, and a dynamic technique that additionally considers the current marking. By analyzing impossible, visible,
 and directional effects of transitions, we identify places where tokens can be removed while preserving the
 property in question. Unlike structural reductions, our techniques modify only the current marking, allowing the
@@ -17,4 +14,4 @@ model checking. We prove the correctness of our techniques and implement them in
 repeated winner in the CTL category in the annual model checking contest (MCC). We measure our methods’
 performance on the MCC 2023 benchmark using the CTL categories and demonstrate that our methods reduce time and,
 especially, memory usage. Our dynamic method explores 39.3% fewer configurations on average and achieves two
-orders of magnitude speedup on at least one query on 23.7% of non-trivial models.
+orders of magnitude speedup on at least one query on 23.7% of non-trivial models.''' }}
