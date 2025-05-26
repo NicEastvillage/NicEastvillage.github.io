@@ -41,7 +41,7 @@ def generate_file(file, base):
         f.write(content)
 
 
-generate_file('index.html', '_meta/index.html')
+generate_file('site/index.html', '_meta/index.html')
 for post in os.listdir('_posts'):
     resolve_file('_posts/' + post)
-    generate_file('posts/' + post, '_meta/post.html')
+    generate_file('site/posts/' + post, '_meta/post.html')
