@@ -1,10 +1,10 @@
-{{ file:head.html }}
-<a href="index.html">&lt; Home</a>
-<h1>{{ var:TITLE }}</h1>
-<p><em>{{ var:MY_NAME }} - {{ var:DATE }}</em></p>
+{{ out = resolve_file('_meta/head.html') }}
+<a href="/index.html">&lt; Home</a>
+<h1>{{ out = title }}</h1>
+<p><em>{{ out = my_name }} - {{ out = date }}</em></p>
 
-{{ var:CONTENT }}
+{{ out = content }}
 
 <hr/>
 
-{{ file:socials.html }}
+{{ out = resolve_file('_meta/socials.html') }}

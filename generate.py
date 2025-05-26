@@ -1,11 +1,12 @@
 import os
 import re
+import codecs
 
 my_name = 'Nicolaj Østerby Jensen'
 
 
 def resolve_file(file):
-    with open(file, 'r') as f:
+    with codecs.open(file, 'r', 'utf-8') as f:
         content = f.read()
 
         start = 0
@@ -36,9 +37,11 @@ def resolve_file(file):
 
 def generate_file(file, base):
     content = resolve_file(base)
-    print(content)
+    with codecs.open(file, 'w', 'utf-8') as f:
+        f.write(content)
 
 
 generate_file('index.html', '_meta/index.html')
-for f in os.listdir('_posts'):
-    print(f)
+for post in os.listdir('_posts'):
+    resolve_file('_posts/' + post)
+    generate_file('posts/' + post, '_meta/post.html')
