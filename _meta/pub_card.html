@@ -12,6 +12,6 @@
     </details>
     </p>
     <p>
-        {{ out = links }}
+        {{ out = '\n• '.join(f'<a href="{link[0]}">{link[1]}</a>' for link in links) }}
     </p>
 </article>

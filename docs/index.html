@@ -20,6 +20,61 @@
 <h2>Highlighted Publications</h2>
 <article>
     <header>
+        <h3>CGAAL: Distributed On-The-Fly ATL Model Checker with Heuristics</h3>
+        <p>Falke B. Ø. Carlsen, Lars Bo P. Frydenskov, Nicolaj Ø. Jensen, Jener Rasmussen, Mathias M. Sørensen, Asger G. Weirsøe, Mathias C. Jensen, Kim G. Larsen - GandALF 2023</p>
+    </header>
+    <p>
+    <details>
+        <summary>
+            Abstract
+        </summary>
+        We present CGAAL, our efficient on-the-fly model checker for alternating-time temporal logic (ATL)
+on concurrent game structures (CGS). We present how our tool encodes ATL as extended dependency graphs with negation
+edges and employs the distributed on-the-fly algorithm by Dalsgaard et al. Our tool offers multiple novel search
+strategies for the algorithm, including DHS which is inspired by PageRank and uses the in-degree of configurations
+as a heuristic, IHS which estimates instability of assignment values, and LPS which estimates the distance to a state
+satisfying the constituent property using linear programming. CGS are input using our modelling language LCGS, where
+composition and synchronisation are easily described. We prove the correctness of our encoding, and our experiments
+show that our tool CGAAL is often one to three orders of magnitude faster than the popular tool PRISM-games on case
+studies from PRISM's documentation and among case studies we have developed. In our evaluation, we also compare and
+evaluate our search strategies, and find that our custom search strategies are often significantly faster than the
+usual breadth-first and depth-first search strategies.
+    </details>
+    </p>
+    <p>
+        <a href="https://doi.org/10.4204/EPTCS.390.7">DOI: 10.4204/EPTCS.390.7</a>
+• <a href="https://github.com/d702e20/CGAAL">Code</a>
+    </p>
+</article>
+<article>
+    <header>
+        <h3>Dynamic Extrapolation in Extended Timed Automata</h3>
+        <p>Nicolaj Ø. Jensen, Peter G. Jensen, Kim G. Larsen - ICFEM 2023</p>
+    </header>
+    <p>
+    <details>
+        <summary>
+            Abstract
+        </summary>
+        Abstractions, such as extrapolation, ensure the termination of timed automata model checking.
+However, such methods are normally only defined for classical timed automata, whereas modern tools like Uppaal take
+as input timed automata extended with discrete data and C-like language constructs (XTA) making classical
+extrapolation excessively over-approximating if even applicable. In this paper, we propose a new dynamic extrapolation
+technique for XTAs that utilizes information from the immediate state of the search to find more precise extrapolation
+values. We determine which code snippets are relevant to obtain the extrapolation values ahead of verification
+using static analysis and then execute these dynamically during verification. We implement our novel extrapolation
+technique in Uppaal and find that it reduces the zone graph sizes by 34.7% overall compared to a classic
+location-clock-based extrapolation. The best case is an 82.7% reduction and the worst case is a surprising 8.2%
+increase.
+    </details>
+    </p>
+    <p>
+        <a href="https://doi.org/10.1007/978-981-99-7584-6_6">DOI: 10.1007/978-981-99-7584-6_6</a>
+• <a href="https://github.com/NicEastvillage/DynamicExtrapolationDataArtifact">Models & data</a>
+    </p>
+</article>
+<article>
+    <header>
         <h3>Token Elimination in Model Checking of Petri Net</h3>
         <p>Nicolaj Ø. Jensen, Jirí Srba, Kim G. Larsen - TACAS 2025</p>
     </header>
@@ -42,7 +97,7 @@ orders of magnitude speedup on at least one query on 23.7% of non-trivial models
     </details>
     </p>
     <p>
-        <a href="https://doi.org/10.1007/978-3-031-90643-5_11">In Proceedings</a>
+        <a href="https://doi.org/10.1007/978-3-031-90643-5_11">DOI: 10.1007/978-3-031-90643-5_11</a>
 • <a href="https://doi.org/10.5281/zenodo.14608438">Reprod. Artifact</a>
 • <a href="https://github.com/TAPAAL/verifypn/pull/178">Code</a>
     </p>

@@ -1,0 +1,17 @@
+{{ title = 'Dynamic Extrapolation in Extended Timed Automata' }}
+{{ conference = 'ICFEM 2023' }}
+{{ authors = 'Nicolaj Ø. Jensen, Peter G. Jensen, Kim G. Larsen' }}
+{{ links = [
+    ('https://doi.org/10.1007/978-981-99-7584-6_6', 'DOI: 10.1007/978-981-99-7584-6_6'),
+    ('https://github.com/NicEastvillage/DynamicExtrapolationDataArtifact', 'Models & data'),
+] }}
+{{ abstract = '''Abstractions, such as extrapolation, ensure the termination of timed automata model checking.
+However, such methods are normally only defined for classical timed automata, whereas modern tools like Uppaal take
+as input timed automata extended with discrete data and C-like language constructs (XTA) making classical
+extrapolation excessively over-approximating if even applicable. In this paper, we propose a new dynamic extrapolation
+technique for XTAs that utilizes information from the immediate state of the search to find more precise extrapolation
+values. We determine which code snippets are relevant to obtain the extrapolation values ahead of verification
+using static analysis and then execute these dynamically during verification. We implement our novel extrapolation
+technique in Uppaal and find that it reduces the zone graph sizes by 34.7% overall compared to a classic
+location-clock-based extrapolation. The best case is an 82.7% reduction and the worst case is a surprising 8.2%
+increase.''' }}

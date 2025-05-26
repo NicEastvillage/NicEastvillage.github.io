@@ -12,16 +12,20 @@
 {{ out = resolve_file('_meta/socials.html') }}
 <h2>Highlighted Publications</h2>
 {{
+res = ''
 for pub in os.listdir('_publications'):
     resolve_file(f'_publications/{pub}')
-    out += resolve_file('_meta/pub_card.html')
+    res += resolve_file('_meta/pub_card.html')
+out = res
 }}
 <h2>Blog Posts</h2>
 <ul>
 {{
+res = ''
 for post in os.listdir('_posts'):
     resolve_file(f'_posts/{post}')
-    out += f'    <li>{date} <a href="posts/{post}">{title}</a></li>\n'
+    res += f'    <li>{date} <a href="posts/{post}">{title}</a></li>\n'
+out = res
 }}
 </ul>
 </body>
