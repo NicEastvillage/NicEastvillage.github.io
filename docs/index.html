@@ -21,6 +21,63 @@
 <h2>Highlighted Publications</h2>
 <article>
     <header>
+        <h3>On-The-Fly Symbolic Algorithm for Timed ATL with Abstractions</h3>
+        <p>Nicolaj Ø. Jensen, Kim G. Larsen, Didier Lime, Jirí Srba - To appear CONCUR 2025</p>
+    </header>
+    <p>
+    <details>
+        <summary>
+            Abstract
+        </summary>
+        Verification of real-time systems with multiple components controlled by multiple parties is a
+challenging task due to its computational complexity. We present an on-the-fly algorithm for verifying timed
+alternating-time temporal logic (TATL), a branching-time logic with quantifiers over outcomes that results from
+coalitions of players in such systems. We combine existing work on games and timed CTL verification in the abstract
+dependency graph (ADG) framework, which allows for easy creation of on-the-fly algorithms that only explore the state
+space as needed. In addition, we generalize the conventional inclusion check to the ADG framework which enables
+dynamic reductions of the dependency graph. Using the insights from the generalization, we present a novel abstraction
+that eliminates the need for conventional inclusion checking altogether in our domain. We implement our algorithms in
+Uppaal and our experiments show that while inclusion checking considerably enhances performance, our abstraction
+provides even more significant improvements, almost two orders of magnitude faster than the naive method. In addition,
+we outperform Uppaal Tiga, which can verify only a strict subset of TATL. After implementing our new abstraction in
+Uppaal Tiga, we also improve its performance by almost an order of magnitude.
+    </details>
+    </p>
+    <p>
+        <a href="https://doi.org/10.5281/zenodo.15172755">Reprod. Artifact</a>
+    </p>
+</article>
+<article>
+    <header>
+        <h3>Token Elimination in Model Checking of Petri Net</h3>
+        <p>Nicolaj Ø. Jensen, Kim G. Larsen, Jirí Srba - TACAS 2025</p>
+    </header>
+    <p>
+    <details>
+        <summary>
+            Abstract
+        </summary>
+        We propose a novel state-space reduction framework to improve the performance of model checking of
+Petri nets. We provide two instances of the framework: a static technique that considers only the structure of the
+net, and a dynamic technique that additionally considers the current marking. By analyzing impossible, visible,
+and directional effects of transitions, we identify places where tokens can be removed while preserving the
+property in question. Unlike structural reductions, our techniques modify only the current marking, allowing the
+net structure to be reused in multiple subproblems concurrently, which can be beneficial for example for CTL
+model checking. We prove the correctness of our techniques and implement them in the open-source tool Tapaal, a
+repeated winner in the CTL category in the annual model checking contest (MCC). We measure our methods’
+performance on the MCC 2023 benchmark using the CTL categories and demonstrate that our methods reduce time and,
+especially, memory usage. Our dynamic method explores 39.3% fewer configurations on average and achieves two
+orders of magnitude speedup on at least one query on 23.7% of non-trivial models.
+    </details>
+    </p>
+    <p>
+        <a href="https://doi.org/10.1007/978-3-031-90643-5_11">DOI: 10.1007/978-3-031-90643-5_11</a>
+• <a href="https://doi.org/10.5281/zenodo.14608438">Reprod. Artifact</a>
+• <a href="https://github.com/TAPAAL/verifypn/pull/178">Code</a>
+    </p>
+</article>
+<article>
+    <header>
         <h3>CGAAL: Distributed On-The-Fly ATL Model Checker with Heuristics</h3>
         <p>Falke B. Ø. Carlsen, Lars Bo P. Frydenskov, Nicolaj Ø. Jensen, Jener Rasmussen, Mathias M. Sørensen, Asger G. Weirsøe, Mathias C. Jensen, Kim G. Larsen - GandALF 2023</p>
     </header>
@@ -72,35 +129,6 @@ increase.
     <p>
         <a href="https://doi.org/10.1007/978-981-99-7584-6_6">DOI: 10.1007/978-981-99-7584-6_6</a>
 • <a href="https://github.com/NicEastvillage/DynamicExtrapolationDataArtifact">Models & data</a>
-    </p>
-</article>
-<article>
-    <header>
-        <h3>Token Elimination in Model Checking of Petri Net</h3>
-        <p>Nicolaj Ø. Jensen, Jirí Srba, Kim G. Larsen - TACAS 2025</p>
-    </header>
-    <p>
-    <details>
-        <summary>
-            Abstract
-        </summary>
-        We propose a novel state-space reduction framework to improve the performance of model checking of
-Petri nets. We provide two instances of the framework: a static technique that considers only the structure of the
-net, and a dynamic technique that additionally considers the current marking. By analyzing impossible, visible,
-and directional effects of transitions, we identify places where tokens can be removed while preserving the
-property in question. Unlike structural reductions, our techniques modify only the current marking, allowing the
-net structure to be reused in multiple subproblems concurrently, which can be beneficial for example for CTL
-model checking. We prove the correctness of our techniques and implement them in the open-source tool Tapaal, a
-repeated winner in the CTL category in the annual model checking contest (MCC). We measure our methods’
-performance on the MCC 2023 benchmark using the CTL categories and demonstrate that our methods reduce time and,
-especially, memory usage. Our dynamic method explores 39.3% fewer configurations on average and achieves two
-orders of magnitude speedup on at least one query on 23.7% of non-trivial models.
-    </details>
-    </p>
-    <p>
-        <a href="https://doi.org/10.1007/978-3-031-90643-5_11">DOI: 10.1007/978-3-031-90643-5_11</a>
-• <a href="https://doi.org/10.5281/zenodo.14608438">Reprod. Artifact</a>
-• <a href="https://github.com/TAPAAL/verifypn/pull/178">Code</a>
     </p>
 </article>
 

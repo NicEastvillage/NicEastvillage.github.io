@@ -13,7 +13,7 @@
 <h2>Highlighted Publications</h2>
 {{
 res = ''
-for pub in os.listdir('_publications'):
+for pub in reversed(os.listdir('_publications')):
     resolve_file(f'_publications/{pub}')
     res += resolve_file('_meta/pub_card.html')
 out = res

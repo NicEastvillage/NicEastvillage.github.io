@@ -1,0 +1,19 @@
+{{ title = 'On-The-Fly Symbolic Algorithm for Timed ATL with Abstractions' }}
+{{ conference = 'To appear CONCUR 2025' }}
+{{ authors = 'Nicolaj Ø. Jensen, Kim G. Larsen, Didier Lime, Jirí Srba' }}
+{{ links = [
+    #('https://doi.org/???', 'DOI: ???'),
+    ('https://doi.org/10.5281/zenodo.15172755', 'Reprod. Artifact'),
+] }}
+{{ abstract = '''Verification of real-time systems with multiple components controlled by multiple parties is a
+challenging task due to its computational complexity. We present an on-the-fly algorithm for verifying timed
+alternating-time temporal logic (TATL), a branching-time logic with quantifiers over outcomes that results from
+coalitions of players in such systems. We combine existing work on games and timed CTL verification in the abstract
+dependency graph (ADG) framework, which allows for easy creation of on-the-fly algorithms that only explore the state
+space as needed. In addition, we generalize the conventional inclusion check to the ADG framework which enables
+dynamic reductions of the dependency graph. Using the insights from the generalization, we present a novel abstraction
+that eliminates the need for conventional inclusion checking altogether in our domain. We implement our algorithms in
+Uppaal and our experiments show that while inclusion checking considerably enhances performance, our abstraction
+provides even more significant improvements, almost two orders of magnitude faster than the naive method. In addition,
+we outperform Uppaal Tiga, which can verify only a strict subset of TATL. After implementing our new abstraction in
+Uppaal Tiga, we also improve its performance by almost an order of magnitude.''' }}
