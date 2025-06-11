@@ -4,12 +4,8 @@
         <p>{{ out = authors }} - {{ out = conference }}</p>
     </header>
     <p>
-    <details>
-        <summary>
-            Abstract
-        </summary>
+        <b>Abstract:</b>
         {{ out = abstract }}
-    </details>
     </p>
     <p>
         {{ out = '\n• '.join(f'<a href="{link[0]}">{link[1]}</a>' for link in links) }}
