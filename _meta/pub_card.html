@@ -3,10 +3,10 @@
         <h3>{{ out = title }}</h3>
         <p>{{ out = authors }} - {{ out = conference }}</p>
     </header>
-    <p>
-        <b>Abstract:</b>
-        {{ out = abstract }}
-    </p>
+    <details>
+        <summary><b>Abstract:</b></summary>
+        <p>{{ out = abstract }}</p>
+    </details>
     <p>
         {{ out = '\n• '.join(f'<a href="{link[0]}">{link[1]}</a>' for link in links) }}
     </p>

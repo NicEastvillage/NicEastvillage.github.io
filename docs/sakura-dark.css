@@ -1,9 +1,19 @@
-/* $color-text: #dedce5; */
 /* Sakura.css v1.5.0
  * ================
  * Minimal css theme.
  * Project: https://github.com/oxalorg/sakura/
  */
+:root {
+  --color-bg: #181818;
+  --color-card: #242424;
+  --color-panel: #4a4a4a;
+  --color-text: #c9c9c9;
+  --color-text-strong: #ffffff;
+  --color-link: #4fd7e3;
+  --color-shadow: rgba(0, 0, 0, 0.5);
+  --color-transparent: transparent;
+}
+
 /* Body */
 html {
   font-size: 62.5%;
@@ -15,8 +25,8 @@ body {
   line-height: 1.618;
   max-width: 38em;
   margin: auto;
-  color: #c9c9c9;
-  background-color: #222222;
+  color: var(--color-text);
+  background-color: var(--color-bg);
   padding: 13px;
 }
 
@@ -78,19 +88,20 @@ small, sub, sup {
 }
 
 hr {
-  border-color: #ffffff;
+  border-color: var(--color-text-strong);
 }
 
 a {
   text-decoration: underline;
-  color: #ffffff;
+  color: var(--color-link);
 }
 a:visited {
-  color: #e6e6e6;
+  color: var(--color-link);
 }
 a:hover {
-  color: #c9c9c9;
-  border-bottom: 2px solid #c9c9c9;
+  color: var(--color-link);
+  text-decoration: none;
+  border-bottom: 2px solid var(--color-link);
 }
 
 ul {
@@ -110,9 +121,9 @@ blockquote {
   padding-top: 0.8em;
   padding-bottom: 0.8em;
   padding-right: 0.8em;
-  border-left: 5px solid #ffffff;
+  border-left: 5px solid var(--color-text-strong);
   margin-bottom: 2.5rem;
-  background-color: #4a4a4a;
+  background-color: var(--color-panel);
 }
 
 blockquote p {
@@ -128,7 +139,7 @@ img, video {
 
 /* Pre and Code */
 pre {
-  background-color: #4a4a4a;
+  background-color: var(--color-panel);
   display: block;
   padding: 1em;
   overflow-x: auto;
@@ -140,13 +151,13 @@ pre {
 code, kbd, samp {
   font-size: 0.9em;
   padding: 0 0.5em;
-  background-color: #4a4a4a;
+  background-color: var(--color-panel);
   white-space: pre-wrap;
 }
 
 pre > code {
   padding: 0;
-  background-color: transparent;
+  background-color: var(--color-transparent);
   white-space: pre;
   font-size: 1em;
 }
@@ -161,15 +172,15 @@ table {
 
 td, th {
   padding: 0.5em;
-  border-bottom: 1px solid #4a4a4a;
+  border-bottom: 1px solid var(--color-panel);
 }
 
 /* Buttons, forms and input */
 input, textarea {
-  border: 1px solid #c9c9c9;
+  border: 1px solid var(--color-text);
 }
 input:focus, textarea:focus {
-  border: 1px solid #ffffff;
+  border: 1px solid var(--color-text-strong);
 }
 
 textarea {
@@ -182,10 +193,10 @@ textarea {
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
-  background-color: #ffffff;
-  color: #222222;
+  background-color: var(--color-text-strong);
+  color: var(--color-bg);
   border-radius: 1px;
-  border: 1px solid #ffffff;
+  border: 1px solid var(--color-text-strong);
   cursor: pointer;
   box-sizing: border-box;
 }
@@ -194,8 +205,8 @@ textarea {
   opacity: 0.5;
 }
 .button:hover, button:hover, input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover, input[type=file]::file-selector-button:hover {
-  background-color: #c9c9c9;
-  color: #222222;
+  background-color: var(--color-text);
+  color: var(--color-bg);
   outline: 0;
 }
 .button:focus-visible, button:focus-visible, input[type=submit]:focus-visible, input[type=reset]:focus-visible, input[type=button]:focus-visible, input[type=file]::file-selector-button:focus-visible {
@@ -204,26 +215,57 @@ textarea {
 }
 
 textarea, select, input {
-  color: #c9c9c9;
+  color: var(--color-text);
   padding: 6px 10px; /* The 6px vertically centers text on FF, ignored by Webkit */
   margin-bottom: 10px;
-  background-color: #4a4a4a;
-  border: 1px solid #4a4a4a;
+  background-color: var(--color-panel);
+  border: 1px solid var(--color-panel);
   border-radius: 4px;
   box-shadow: none;
   box-sizing: border-box;
 }
 textarea:focus, select:focus, input:focus {
-  border: 1px solid #ffffff;
+  border: 1px solid var(--color-text-strong);
   outline: 0;
 }
 
 input[type=checkbox]:focus {
-  outline: 1px dotted #ffffff;
+  outline: 1px dotted var(--color-text-strong);
 }
 
 label, legend, fieldset {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 600;
+}
+
+article {
+  background-color: var(--color-card);
+  border-radius: 6px;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+article h3 {
+  margin-top: 0;
+}
+
+article > :last-child {
+  margin-bottom: 0;
+}
+
+article summary {
+  cursor: pointer;
+}
+
+article summary:hover {
+  background-color: var(--color-panel);
+}
+
+article details:not([open]) {
+  margin-bottom: 1rem;
+}
+
+article details p {
+  margin-top: 1rem;
 }

@@ -25,9 +25,9 @@
         <h3>On-The-Fly Symbolic Algorithm for Timed ATL with Abstractions</h3>
         <p>Nicolaj Ø. Jensen, Kim G. Larsen, Didier Lime, Jirí Srba - CONCUR 2025</p>
     </header>
-    <p>
-        <b>Abstract:</b>
-        Verification of real-time systems with multiple components controlled by multiple parties is a
+    <details>
+        <summary><b>Abstract:</b></summary>
+        <p>Verification of real-time systems with multiple components controlled by multiple parties is a
 challenging task due to its computational complexity. We present an on-the-fly algorithm for verifying timed
 alternating-time temporal logic (TATL), a branching-time logic with quantifiers over outcomes that results from
 coalitions of players in such systems. We combine existing work on games and timed CTL verification in the abstract
@@ -38,8 +38,8 @@ that eliminates the need for conventional inclusion checking altogether in our d
 Uppaal and our experiments show that while inclusion checking considerably enhances performance, our abstraction
 provides even more significant improvements, almost two orders of magnitude faster than the naive method. In addition,
 we outperform Uppaal Tiga, which can verify only a strict subset of TATL. After implementing our new abstraction in
-Uppaal Tiga, we also improve its performance by almost an order of magnitude.
-    </p>
+Uppaal Tiga, we also improve its performance by almost an order of magnitude.</p>
+    </details>
     <p>
         <a href="https://doi.org/10.4230/LIPIcs.CONCUR.2025.25">DOI: LIPIcs.CONCUR.2025.25</a>
 • <a href="https://doi.org/10.48550/arXiv.2506.07802">ArXiv Full Version</a>
@@ -51,9 +51,9 @@ Uppaal Tiga, we also improve its performance by almost an order of magnitude.
         <h3>Token Elimination in Model Checking of Petri Net</h3>
         <p>Nicolaj Ø. Jensen, Kim G. Larsen, Jirí Srba - TACAS 2025</p>
     </header>
-    <p>
-        <b>Abstract:</b>
-        We propose a novel state-space reduction framework to improve the performance of model checking of
+    <details>
+        <summary><b>Abstract:</b></summary>
+        <p>We propose a novel state-space reduction framework to improve the performance of model checking of
 Petri nets. We provide two instances of the framework: a static technique that considers only the structure of the
 net, and a dynamic technique that additionally considers the current marking. By analyzing impossible, visible,
 and directional effects of transitions, we identify places where tokens can be removed while preserving the
@@ -63,8 +63,8 @@ model checking. We prove the correctness of our techniques and implement them in
 repeated winner in the CTL category in the annual model checking contest (MCC). We measure our methods’
 performance on the MCC 2023 benchmark using the CTL categories and demonstrate that our methods reduce time and,
 especially, memory usage. Our dynamic method explores 39.3% fewer configurations on average and achieves two
-orders of magnitude speedup on at least one query on 23.7% of non-trivial models.
-    </p>
+orders of magnitude speedup on at least one query on 23.7% of non-trivial models.</p>
+    </details>
     <p>
         <a href="https://doi.org/10.1007/978-3-031-90643-5_11">DOI: 10.1007/978-3-031-90643-5_11</a>
 • <a href="https://doi.org/10.5281/zenodo.14608438">Reprod. Artifact</a>
@@ -76,9 +76,9 @@ orders of magnitude speedup on at least one query on 23.7% of non-trivial models
         <h3>CGAAL: Distributed On-The-Fly ATL Model Checker with Heuristics</h3>
         <p>Falke B. Ø. Carlsen, Lars Bo P. Frydenskov, Nicolaj Ø. Jensen, Jener Rasmussen, Mathias M. Sørensen, Asger G. Weirsøe, Mathias C. Jensen, Kim G. Larsen - GandALF 2023</p>
     </header>
-    <p>
-        <b>Abstract:</b>
-        We present CGAAL, our efficient on-the-fly model checker for alternating-time temporal logic (ATL)
+    <details>
+        <summary><b>Abstract:</b></summary>
+        <p>We present CGAAL, our efficient on-the-fly model checker for alternating-time temporal logic (ATL)
 on concurrent game structures (CGS). We present how our tool encodes ATL as extended dependency graphs with negation
 edges and employs the distributed on-the-fly algorithm by Dalsgaard et al. Our tool offers multiple novel search
 strategies for the algorithm, including DHS which is inspired by PageRank and uses the in-degree of configurations
@@ -88,8 +88,8 @@ composition and synchronisation are easily described. We prove the correctness o
 show that our tool CGAAL is often one to three orders of magnitude faster than the popular tool PRISM-games on case
 studies from PRISM's documentation and among case studies we have developed. In our evaluation, we also compare and
 evaluate our search strategies, and find that our custom search strategies are often significantly faster than the
-usual breadth-first and depth-first search strategies.
-    </p>
+usual breadth-first and depth-first search strategies.</p>
+    </details>
     <p>
         <a href="https://doi.org/10.4204/EPTCS.390.7">DOI: 10.4204/EPTCS.390.7</a>
 • <a href="https://github.com/d702e20/CGAAL">Code</a>
@@ -100,9 +100,9 @@ usual breadth-first and depth-first search strategies.
         <h3>Dynamic Extrapolation in Extended Timed Automata</h3>
         <p>Nicolaj Ø. Jensen, Peter G. Jensen, Kim G. Larsen - ICFEM 2023</p>
     </header>
-    <p>
-        <b>Abstract:</b>
-        Abstractions, such as extrapolation, ensure the termination of timed automata model checking.
+    <details>
+        <summary><b>Abstract:</b></summary>
+        <p>Abstractions, such as extrapolation, ensure the termination of timed automata model checking.
 However, such methods are normally only defined for classical timed automata, whereas modern tools like Uppaal take
 as input timed automata extended with discrete data and C-like language constructs (XTA) making classical
 extrapolation excessively over-approximating if even applicable. In this paper, we propose a new dynamic extrapolation
@@ -111,8 +111,8 @@ values. We determine which code snippets are relevant to obtain the extrapolatio
 using static analysis and then execute these dynamically during verification. We implement our novel extrapolation
 technique in Uppaal and find that it reduces the zone graph sizes by 34.7% overall compared to a classic
 location-clock-based extrapolation. The best case is an 82.7% reduction and the worst case is a surprising 8.2%
-increase.
-    </p>
+increase.</p>
+    </details>
     <p>
         <a href="https://doi.org/10.1007/978-981-99-7584-6_6">DOI: 10.1007/978-981-99-7584-6_6</a>
 • <a href="https://github.com/NicEastvillage/DynamicExtrapolationDataArtifact">Models & data</a>
@@ -124,4 +124,12 @@ increase.
     <li>2021-05-06 <a href="posts/2021-05-06-fixing-minecrafts-progression.html">Fixing Minecraft's Progression</a></li>
 
 </ul>
+
+<hr/>
+
+@ <a href="https://github.com/NicEastvillage">GitHub</a>
+• <a href="https://www.youtube.com/channel/UCw3DqwZf4oAa2OQQhK1vDuw">YouTube</a>
+• <a href="https://bsky.app/profile/niceastvillage.bsky.social">BlueSky</a>
+• <a href="https://twitter.com/NicEastvillage">Twitter</a>
+• <a href="https://eastvillage.itch.io/">Itch.io</a>
 </body>
