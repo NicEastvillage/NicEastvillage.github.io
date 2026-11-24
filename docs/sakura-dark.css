@@ -247,8 +247,12 @@ article {
   margin-bottom: 2.5rem;
 }
 
-article h3 {
+article h4 {
   margin-top: 0;
+}
+
+article header p {
+  margin-bottom: 1rem;
 }
 
 article > :last-child {
@@ -257,6 +261,7 @@ article > :last-child {
 
 article summary {
   cursor: pointer;
+  color: var(--color-link);
 }
 
 article summary:hover {
