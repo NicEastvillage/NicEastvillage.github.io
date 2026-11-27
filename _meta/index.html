@@ -4,13 +4,19 @@
 <p>
     I am a computer scientist Post Doc at <a href="https://cs.aau.dk"> Department of Computer Science, Aalborg University</a>.
     My supervisors are <a href="https://kgl.cs.aau.dk/">Kim Guldstrand Larsen</a> and <a
-        href="https://homes.cs.aau.dk/~srba/">Jiri Srba</a>. My research focus on <em>abstractions and on-the-fly algorithms</em>
+        href="https://homes.cs.aau.dk/~srba/">Jiri Srba</a>. My research focus on <em>abstractions</em> and <em>on-the-fly algorithms</em>
     for <em>model checking</em> of <em>timed automata</em> and <em>Petri net</em> as well as safe <em>multi-agent AI</em>.
     My personal interests also include <em>game development</em>, <em>programming languages</em>, and <em>classical AI</em>.
     In my spare time, I moderate and make bots in the <a href="https://rlbot.org/">Rocket League bot community</a>
     among other nerdy things.
 </p>
 {{ out = resolve_file('_meta/socials.html') }}
+<h2>News</h2>
+<ul>
+    <li>2026-12-01: Started as a Senior Software Engineer at <a href="https://softnordic.dk/">SoftNordic</a>.</li>
+    <li>2022-09-01: Started as a PhD under <a href="https://kgl.cs.aau.dk/">Kim Guldstrand Larsen</a> and <a
+        href="https://homes.cs.aau.dk/~srba/">Jiri Srba</a> at <a href="https://cs.aau.dk"> Department of Computer Science, Aalborg University</a>.</li>
+</ul>
 <h2>Highlighted Publications</h2>
 {{
 res = ''
@@ -25,7 +31,7 @@ out = res
 res = ''
 for post in os.listdir('_posts'):
     resolve_file(f'_posts/{post}')
-    res += f'    <li>{date} <a href="posts/{post}">{title}</a></li>\n'
+    res += f'    <li>{date}: <a href="posts/{post}">{title}</a></li>\n'
 out = res
 }}
 </ul>
